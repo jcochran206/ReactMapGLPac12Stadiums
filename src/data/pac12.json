@@ -1,0 +1,106 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+              "ID": 1,
+              "NAME": "Autzen Stadium",
+              "Tenant": "Oregon Ducks",
+              "ADDRESS": "2727 Leo Harris Parkway",
+              "City": "Eugene",
+              "State": "Oregon",
+              "Zip" : "97401",
+              "NOTES": "Outdoor",
+              "Capacity": "54000",
+              "Conference": "Pac 12",
+              "Surface": "Fieldturf",
+              "Opened": "23 Sep 1967",
+              "Cost": "2.5 Million",
+              "Description": "Home of the Oregon Ducks",
+              "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/04/autzen17950.jpg"
+              
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-123.0684196, 44.0584581]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+              "ID": 2,
+              "NAME": "California Memorial Stadium",
+              "Tenant": "Golden Bears",
+              "ADDRESS": "76 Canyon Rd",
+              "City": "Alameda",
+              "State": "California",
+              "Zip" : "94720",
+              "NOTES": "Outdoor",
+              "Capacity": "63000",
+              "Conference": "Pac 12",
+              "Surface": "Momentum Turf",
+              "Opened": "24 Nov 1923",
+              "Cost": "1.4 Million",
+              "Description": "Home of the Cal Bears",
+              "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/05/calmemorial17950.jpg"
+              
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-122.2505, 37.8693]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+              "ID": 3,
+              "NAME": "Husky Stadium",
+              "Tenant": "Washington Huskies",
+              "ADDRESS": "3800 Montlake Blvd NE",
+              "City": "Seattle",
+              "State": "Washington",
+              "Zip" : "98195",
+              "NOTES": "Outdoor",
+              "Capacity": "70138",
+              "Conference": "Pac 12",
+              "Surface": "Fieldturf",
+              "Opened": "27 Nov 1920",
+              "Cost": "600K",
+              "Description": "Home of the Dawgs",
+              "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/04/husky17952.jpg"
+              
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-122.301594, 47.650375]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+              "ID": 4,
+              "NAME": "Martin Stadium",
+              "Tenant": "Washington State Cougars",
+              "ADDRESS": "720 NE Stadium Way",
+              "City": "Pullman",
+              "State": "Washington",
+              "Zip" : "99163",
+              "NOTES": "Outdoor",
+              "Capacity": "32952",
+              "Conference": "Pac 12",
+              "Surface": "Fieldturf",
+              "Opened": "30 Sep 1972",
+              "Cost": "1 million",
+              "Description": "Home of the Cougars",
+              "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/05/martin.jpeg"
+              
+            },
+            "geometry": {
+              "type": "Point",
+              "coordinates": [-117.156266042, 46.725747097]
+            }
+        }
+        
+    ]
+}
