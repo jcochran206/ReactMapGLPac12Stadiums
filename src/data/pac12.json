@@ -100,6 +100,56 @@
               "type": "Point",
               "coordinates": [-117.156266042, 46.725747097]
             }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "ID": 5,
+            "NAME": "Reser Stadium",
+            "Tenant": "Oregon State Beavers",
+            "ADDRESS": "2600 SW Western Blvd",
+            "City": "Benton",
+            "State": "Oregon",
+            "Zip" : "97333",
+            "NOTES": "Outdoor",
+            "Capacity": "43363",
+            "Conference": "Pac 12",
+            "Surface": "Fieldturf",
+            "Opened": "14 Nov 1953",
+            "Cost": "1 million",
+            "Description": "Home of the Beavers",
+            "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/05/martin.jpeg"
+            
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-123.280303728, 44.5612280445]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "ID": 6,
+            "NAME": "Stanford Stadium",
+            "Tenant": "Oregon State Beavers",
+            "ADDRESS": "2600 SW Western Blvd",
+            "City": "Benton",
+            "State": "Oregon",
+            "Zip" : "97333",
+            "NOTES": "Outdoor",
+            "Capacity": "50424",
+            "Conference": "Pac 12",
+            "Surface": "Grass",
+            "Opened": "14 Nov 1953",
+            "Cost": "90 million",
+            "Description": "Home of the Beavers",
+            "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/05/martin.jpeg"
+            
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-122.1613533, 37.4343835]
+          }
         }
         
     ]
