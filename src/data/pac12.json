@@ -150,6 +150,56 @@
             "type": "Point",
             "coordinates": [-122.1613533, 37.4343835]
           }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "ID": 7,
+            "NAME": "Arizona Stadium",
+            "Tenant": "Arizona WildCats",
+            "ADDRESS": "1 N National Championship Dr",
+            "City": "Tucson",
+            "State": "Arizona",
+            "Zip" : "85719",
+            "NOTES": "Outdoor",
+            "Capacity": "50782",
+            "Conference": "Pac 12",
+            "Surface": "FieldTurf",
+            "Opened": "12 Oct 1929",
+            "Cost": "3.5",
+            "Description": "Home of the WildCats",
+            "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/04/arizona17950.jpg"
+            
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-110.942662896, 32.223999104]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "ID": 8,
+            "NAME": "Folsom Field",
+            "Tenant": "Colorado Buffaloes",
+            "ADDRESS": "2400 Colorado Ave",
+            "City": "Boulder",
+            "State": "Colorado",
+            "Zip" : "80305",
+            "NOTES": "Outdoor",
+            "Capacity": "53613",
+            "Conference": "Pac 12",
+            "Surface": "Grass",
+            "Opened": "11 Oct 1924",
+            "Cost": "3.5",
+            "Description": "Home of the WildCats",
+            "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/04/folsom.jpeg"
+            
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-105.266832266, 40.005666644]
+          }
         }
         
     ]
