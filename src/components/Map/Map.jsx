@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
+import {FaFootballBall} from 'react-icons/fa'
 import ReactMapGL, {FullscreenControl, Marker, Popup} from "react-map-gl";
 import pac12Data from "../../data/pac12.json";
-
 
 
 function Map() {
@@ -10,7 +10,9 @@ const [viewport, setViewport] = useState({
     longitude: -122.3321,
     zoom: 3,
 });
-const [selectedItem, setSelectedItem] = useState(null);
+
+const [showPopup, setShowPopup] = useState(null);
+
 
   return (
     
@@ -22,19 +24,32 @@ const [selectedItem, setSelectedItem] = useState(null);
         onMove={(viewport) => {
           setViewport(viewport);
         }}
+
         >Markers here
-        {pac12Data.features.map((item) => (
-          <Marker key={item.properties.ID} 
+        {pac12Data.features.map((item, index) => (
+          <Marker key={`marker-${index}`} 
           latitude={item.geometry.coordinates[1]}
           longitude={item.geometry.coordinates[0]}
-         
-          
+          anchor="bottom"
+          onClick={e => {
+            e.originalEvent.stopPropagation();
+            setShowPopup(item)
+          }} 
           >
+        {showPopup && (
+          <Popup key={item.properties.ID} longitude={item.geometry.coordinates[0]} latitude={item.geometry.coordinates[1]}
+            anchor="top"
+            onClose={() => setShowPopup(null)}>
+            <div className='mapinfo'>
+            <h3>{item.properties.NAME}</h3>
+            <p>{item.properties.Tenant}</p>
+              
+            </div>
             
-          </Marker>
-        ))}
-        
-        
+          </Popup>)}
+          </Marker> 
+         ))}
+        <FullscreenControl/>
         </ReactMapGL>
     </div>
     
