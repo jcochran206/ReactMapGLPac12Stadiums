@@ -26,29 +26,33 @@ const [showPopup, setShowPopup] = useState(null);
         }}
 
         >Markers here
-        {pac12Data.features.map((item, index) => (
-          <Marker key={`marker-${index}`} 
+        {pac12Data.features.map((item) => (
+          <Marker key={item.properties.ID} 
           latitude={item.geometry.coordinates[1]}
           longitude={item.geometry.coordinates[0]}
           anchor="bottom"
           onClick={e => {
             e.originalEvent.stopPropagation();
+            console.log('item from map marker ..',item)
             setShowPopup(item)
           }} 
+          
           >
-        {showPopup && (
-          <Popup key={item.properties.ID} longitude={item.geometry.coordinates[0]} latitude={item.geometry.coordinates[1]}
+      
+          </Marker> 
+          
+         ))}
+         {showPopup && (
+          <Popup longitude={showPopup.geometry.coordinates[0]} latitude={showPopup.geometry.coordinates[1]}
             anchor="top"
             onClose={() => setShowPopup(null)}>
             <div className='mapinfo'>
-            <h3>{item.properties.NAME}</h3>
-            <p>{item.properties.Tenant}</p>
+            <h3>{showPopup.properties.NAME}</h3>
+            <p>{showPopup.properties.Tenant}</p>
               
             </div>
             
           </Popup>)}
-          </Marker> 
-         ))}
         <FullscreenControl/>
         </ReactMapGL>
     </div>
