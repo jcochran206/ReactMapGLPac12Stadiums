@@ -36,9 +36,7 @@ const [showPopup, setShowPopup] = useState(null);
             console.log('item from map marker ..',item)
             setShowPopup(item)
           }} 
-          
           >
-      
           </Marker> 
           
          ))}
@@ -51,7 +49,6 @@ const [showPopup, setShowPopup] = useState(null);
             <p>{showPopup.properties.Tenant}</p>
               
             </div>
-            
           </Popup>)}
         <FullscreenControl/>
         </ReactMapGL>
