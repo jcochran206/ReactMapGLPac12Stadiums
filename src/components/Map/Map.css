@@ -1,4 +1,4 @@
-.mapinfo {
+.box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,8 +6,5 @@
     background: none;
     border: none;
     cursor: pointer;
-    width: 300px;
-    height: 300px;
-    font-size: 10px;
 }
 

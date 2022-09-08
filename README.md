@@ -14,5 +14,8 @@ This application is simple map the depicts all PAC 12 conference stadiums.  A us
 To download application - use git clone
 Start App - use NPM Start
 
+## Features 
+- Map Markers of all conference teams
+
 ## Author :wave: 
 Jonathan Cochran

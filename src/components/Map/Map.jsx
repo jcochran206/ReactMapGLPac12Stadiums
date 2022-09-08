@@ -1,8 +1,6 @@
-import React, {useEffect, useMemo, useState} from 'react';
-import {FaFootballBall} from 'react-icons/fa'
+import React, {useState} from 'react';
 import ReactMapGL, {FullscreenControl, Marker, Popup} from "react-map-gl";
 import pac12Data from "../../data/pac12.json";
-
 
 function Map() {
 const [viewport, setViewport] = useState({
@@ -17,7 +15,7 @@ const [showPopup, setShowPopup] = useState(null);
   return (
     
     <div className='box'>
-        <ReactMapGL {...viewport} 
+      <ReactMapGL {...viewport} 
         style={{width: 800, height: 800}}
         mapStyle="mapbox://styles/mapbox/light-v10"
         mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
@@ -42,7 +40,7 @@ const [showPopup, setShowPopup] = useState(null);
          ))}
          {showPopup && (
           <Popup longitude={showPopup.geometry.coordinates[0]} latitude={showPopup.geometry.coordinates[1]}
-            anchor="top"
+            anchor="bottom"
             onClose={() => setShowPopup(null)}>
             <div className='mapinfo'>
             <h3>{showPopup.properties.NAME}</h3>
@@ -50,7 +48,7 @@ const [showPopup, setShowPopup] = useState(null);
               
             </div>
           </Popup>)}
-        <FullscreenControl/>
+          <FullscreenControl/>
         </ReactMapGL>
     </div>
     
