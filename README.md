@@ -9,6 +9,7 @@ This application is simple map the depicts all PAC 12 conference stadiums.  A us
 ## Libraries
 - React
 - React MapBox GL
+- Tailwind CSS
 
 ## How to use application
 To download application - use git clone
