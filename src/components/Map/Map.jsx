@@ -15,7 +15,7 @@ const [showPopup, setShowPopup] = useState(null);
   return (
     
     <div className='box'>
-      <ReactMapGL {...viewport} 
+      <ReactMapGL className='styledmap' {...viewport} 
         style={{width: 800, height: 800}}
         mapStyle="mapbox://styles/mapbox/light-v10"
         mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
@@ -23,7 +23,7 @@ const [showPopup, setShowPopup] = useState(null);
           setViewport(viewport);
         }}
 
-        >Markers here
+        >
         {pac12Data.features.map((item) => (
           <Marker key={item.properties.ID} 
           latitude={item.geometry.coordinates[1]}
