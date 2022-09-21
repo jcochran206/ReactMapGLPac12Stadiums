@@ -14,9 +14,9 @@ const [showPopup, setShowPopup] = useState(null);
 
   return (
     
-    <div className='box'>
-      <ReactMapGL className='styledmap' {...viewport} 
-        style={{width: 800, height: 800}}
+    <div className='max-w-[1640px] mx-auto p-4'>
+      <ReactMapGL {...viewport} 
+        style={{position: 'relative', width: '100%', height: 400}}
         mapStyle="mapbox://styles/mapbox/light-v10"
         mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
         onMove={(viewport) => {
