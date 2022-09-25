@@ -1,6 +1,8 @@
 import React, {useState} from 'react'; 
+import { NavLink } from 'react-router-dom';
 import {FaClipboard, FaFootballBall} from 'react-icons/fa';
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
+import {MdHistoryEdu} from 'react-icons/md';
 
 const Header = () => {
     const [nav, setNav] = useState(false);
@@ -27,8 +29,9 @@ const Header = () => {
         <h2 className='text-2xl p-4'>PAC12 <span className='bold'>Champions</span></h2>
         <nav>
             <ul className='flex flex-col p-4 text-gray-800'>
-                <li className='text-xl py-4 flex'><FaFootballBall size={25} className="mr-4"/>Home</li>
-                <li className='text-xl py-4 flex'><FaClipboard size={25} className="mr-4"/>About</li>
+                <NavLink className='text-xl py-4 flex'><FaFootballBall size={25} className="mr-4" to='/' />Home</NavLink>
+                <NavLink className='text-xl py-4 flex'><FaClipboard size={25} className="mr-4" to='/about' />About</NavLink>
+                <NavLink className='text-xl py-4 flex'><MdHistoryEdu size={25} className="mr-4" to='/history' />History</NavLink>
             </ul>
         </nav>
     </div>
