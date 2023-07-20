@@ -7,6 +7,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import History from './components/History/History';
 import Hero from './components/Hero/Hero';
+import Map from './components/Map/Map';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      <Map />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />}/>
