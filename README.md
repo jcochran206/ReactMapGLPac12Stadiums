@@ -30,5 +30,8 @@ Start App - use NPM Start
 - Map Markers of all conference teams
 - different markers to illustrate teams no longer in conference after 2023 season
 
+## Wireframes
+[] Link new design here 
+
 ## Author :wave: 
 Jonathan Cochran
