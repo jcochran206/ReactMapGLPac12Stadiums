@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, useLocation} from 'react-router-dom';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './App.css';
 import Header from './components/Header/Header';
@@ -10,14 +10,16 @@ import Hero from './components/Hero/Hero';
 import Map from './components/Map/Map';
 import Footer from './components/Footer/Footer';
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isAboutPage = location.pathname === '/about';
+  const isConferenceMapPage = location.pathname === '/conference-map';
 
   return (
-    <BrowserRouter>
     <div className="App">
       <Header />
-      <Hero />
-      <Map />
+      {!isAboutPage && !isConferenceMapPage && <Hero />}
+      {!isAboutPage && !isConferenceMapPage && <Map />}
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />}/>
@@ -26,8 +28,14 @@ function App() {
       </Routes>
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
-    
   );
 }
 

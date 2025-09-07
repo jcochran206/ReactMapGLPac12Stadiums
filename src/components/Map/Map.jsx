@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ReactMapGL, {FullscreenControl, Marker, Popup} from "react-map-gl";
 import { FaFootballBall, FaMapMarkerAlt } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
 import pac12Data from "../../data/pac12.json";
 
 function Map() {
@@ -11,6 +12,8 @@ const [viewport, setViewport] = useState({
 });
 
 const [showPopup, setShowPopup] = useState(null);
+const location = useLocation();
+const isConferenceMapPage = location.pathname === '/conference-map';
 
 // Function to get marker color based on status
 const getMarkerColor = (status) => {
@@ -41,46 +44,52 @@ const getConferenceColor = (conference) => {
 };
 
   return (
-    <div className='max-w-[1640px] mx-auto p-4'>
-      {/* Map Legend */}
-      <div className='mb-4 bg-white rounded-lg shadow-md p-4'>
-        <h3 className='text-lg font-bold mb-3'>Map Legend</h3>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <div>
-            <h4 className='font-semibold mb-2'>Team Status</h4>
-            <div className='flex items-center space-x-4'>
-              <div className='flex items-center'>
-                <div className='w-4 h-4 bg-green-500 rounded-full mr-2'></div>
-                <span className='text-sm'>Current Pac-12</span>
-              </div>
-              <div className='flex items-center'>
-                <div className='w-4 h-4 bg-red-500 rounded-full mr-2'></div>
-                <span className='text-sm'>Former Pac-12</span>
+    <div className={isConferenceMapPage ? 'h-screen' : 'max-w-[1640px] mx-auto p-4'}>
+      {/* Map Legend - only show on non-conference-map pages */}
+      {!isConferenceMapPage && (
+        <div className='mb-4 bg-white rounded-lg shadow-md p-4'>
+          <h3 className='text-lg font-bold mb-3'>Map Legend</h3>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <div>
+              <h4 className='font-semibold mb-2'>Team Status</h4>
+              <div className='flex items-center space-x-4'>
+                <div className='flex items-center'>
+                  <div className='w-4 h-4 bg-green-500 rounded-full mr-2'></div>
+                  <span className='text-sm'>Current Pac-12</span>
+                </div>
+                <div className='flex items-center'>
+                  <div className='w-4 h-4 bg-red-500 rounded-full mr-2'></div>
+                  <span className='text-sm'>Former Pac-12</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            <h4 className='font-semibold mb-2'>New Conferences</h4>
-            <div className='flex items-center space-x-4'>
-              <div className='flex items-center'>
-                <div className='w-4 h-4 bg-blue-600 rounded-full mr-2'></div>
-                <span className='text-sm'>Big Ten</span>
-              </div>
-              <div className='flex items-center'>
-                <div className='w-4 h-4 bg-green-600 rounded-full mr-2'></div>
-                <span className='text-sm'>ACC</span>
-              </div>
-              <div className='flex items-center'>
-                <div className='w-4 h-4 bg-red-600 rounded-full mr-2'></div>
-                <span className='text-sm'>Big 12</span>
+            <div>
+              <h4 className='font-semibold mb-2'>New Conferences</h4>
+              <div className='flex items-center space-x-4'>
+                <div className='flex items-center'>
+                  <div className='w-4 h-4 bg-blue-600 rounded-full mr-2'></div>
+                  <span className='text-sm'>Big Ten</span>
+                </div>
+                <div className='flex items-center'>
+                  <div className='w-4 h-4 bg-green-600 rounded-full mr-2'></div>
+                  <span className='text-sm'>ACC</span>
+                </div>
+                <div className='flex items-center'>
+                  <div className='w-4 h-4 bg-red-600 rounded-full mr-2'></div>
+                  <span className='text-sm'>Big 12</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
       <ReactMapGL {...viewport} 
-        style={{position: 'relative', width: '100%', height: 500}}
+        style={{
+          position: 'relative', 
+          width: '100%', 
+          height: isConferenceMapPage ? '90vh' : '500px'
+        }}
         mapStyle="mapbox://styles/mapbox/light-v10"
         mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
         onMove={(viewport) => {
