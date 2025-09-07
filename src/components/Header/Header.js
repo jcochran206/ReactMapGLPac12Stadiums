@@ -29,9 +29,10 @@ const Header = () => {
         <h2 className='text-2xl p-4'>PAC12 <span className='bold'>Champions</span></h2>
         <nav>
             <ul className='flex flex-col p-4 text-gray-800'>
-                <NavLink className='text-xl py-4 flex'><FaFootballBall size={25} className="mr-4" to='/' />Home</NavLink>
-                <NavLink className='text-xl py-4 flex'><FaClipboard size={25} className="mr-4" to='/about' />About</NavLink>
-                <NavLink className='text-xl py-4 flex'><MdHistoryEdu size={25} className="mr-4" to='/history' />History</NavLink>
+                <NavLink to='/' className='text-xl py-4 flex'><FaFootballBall size={25} className="mr-4" />Home</NavLink>
+                <NavLink to='/about' className='text-xl py-4 flex'><FaClipboard size={25} className="mr-4" />About</NavLink>
+                <NavLink to='/history' className='text-xl py-4 flex'><MdHistoryEdu size={25} className="mr-4" />History</NavLink>
+                <NavLink to='/conference-map' className='text-xl py-4 flex'><FaFootballBall size={25} className="mr-4" />Conference Map</NavLink>
             </ul>
         </nav>
     </div>

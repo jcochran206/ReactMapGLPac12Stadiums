@@ -14,6 +14,8 @@
               "NOTES": "Outdoor",
               "Capacity": "54000",
               "Conference": "Pac 12",
+              "CurrentConference": "Big Ten",
+              "Status": "Former",
               "Surface": "Fieldturf",
               "Opened": "23 Sep 1967",
               "Cost": "2.5 Million",
@@ -39,6 +41,8 @@
               "NOTES": "Outdoor",
               "Capacity": "63000",
               "Conference": "Pac 12",
+              "CurrentConference": "ACC",
+              "Status": "Former",
               "Surface": "Momentum Turf",
               "Opened": "24 Nov 1923",
               "Cost": "1.4 Million",
@@ -64,6 +68,8 @@
               "NOTES": "Outdoor",
               "Capacity": "70138",
               "Conference": "Pac 12",
+              "CurrentConference": "Big Ten",
+              "Status": "Former",
               "Surface": "Fieldturf",
               "Opened": "27 Nov 1920",
               "Cost": "600K",
@@ -89,6 +95,8 @@
               "NOTES": "Outdoor",
               "Capacity": "32952",
               "Conference": "Pac 12",
+              "CurrentConference": "Pac-12",
+              "Status": "Current",
               "Surface": "Fieldturf",
               "Opened": "30 Sep 1972",
               "Cost": "1 million",
@@ -113,11 +121,13 @@
             "Zip" : "97333",
             "NOTES": "Outdoor",
             "Capacity": "43363",
-            "Conference": "Pac 12",
-            "Surface": "Fieldturf",
-            "Opened": "14 Nov 1953",
-            "Cost": "1 million",
-            "Description": "Home of the Beavers",
+              "Conference": "Pac 12",
+              "CurrentConference": "Pac-12",
+              "Status": "Current",
+              "Surface": "Fieldturf",
+              "Opened": "14 Nov 1953",
+              "Cost": "1 million",
+              "Description": "Home of the Beavers",
             "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/05/martin.jpeg"
             
           },
@@ -131,18 +141,20 @@
           "properties": {
             "ID": 6,
             "NAME": "Stanford Stadium",
-            "Tenant": "Oregon State Beavers",
-            "ADDRESS": "2600 SW Western Blvd",
-            "City": "Benton",
-            "State": "Oregon",
-            "Zip" : "97333",
+            "Tenant": "Stanford Cardinal",
+            "ADDRESS": "625 Nelson Rd",
+            "City": "Stanford",
+            "State": "California",
+            "Zip" : "94305",
             "NOTES": "Outdoor",
             "Capacity": "50424",
-            "Conference": "Pac 12",
-            "Surface": "Grass",
-            "Opened": "14 Nov 1953",
-            "Cost": "90 million",
-            "Description": "Home of the Beavers",
+              "Conference": "Pac 12",
+              "CurrentConference": "ACC",
+              "Status": "Former",
+              "Surface": "Grass",
+              "Opened": "14 Nov 1953",
+              "Cost": "90 million",
+              "Description": "Home of the Stanford Cardinal",
             "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/05/martin.jpeg"
             
           },
@@ -163,11 +175,13 @@
             "Zip" : "85719",
             "NOTES": "Outdoor",
             "Capacity": "50782",
-            "Conference": "Pac 12",
-            "Surface": "FieldTurf",
-            "Opened": "12 Oct 1929",
-            "Cost": "3.5",
-            "Description": "Home of the WildCats",
+              "Conference": "Pac 12",
+              "CurrentConference": "Big 12",
+              "Status": "Former",
+              "Surface": "FieldTurf",
+              "Opened": "12 Oct 1929",
+              "Cost": "3.5",
+              "Description": "Home of the WildCats",
             "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/04/arizona17950.jpg"
             
           },
@@ -188,17 +202,123 @@
             "Zip" : "80305",
             "NOTES": "Outdoor",
             "Capacity": "53613",
-            "Conference": "Pac 12",
-            "Surface": "Grass",
-            "Opened": "11 Oct 1924",
-            "Cost": "3.5",
-            "Description": "Home of the WildCats",
+              "Conference": "Pac 12",
+              "CurrentConference": "Big 12",
+              "Status": "Former",
+              "Surface": "Grass",
+              "Opened": "11 Oct 1924",
+              "Cost": "3.5",
+              "Description": "Home of the Colorado Buffaloes",
             "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/04/folsom.jpeg"
             
           },
           "geometry": {
             "type": "Point",
             "coordinates": [-105.266832266, 40.005666644]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "ID": 9,
+            "NAME": "Rice-Eccles Stadium",
+            "Tenant": "Utah Utes",
+            "ADDRESS": "451 S 1400 E",
+            "City": "Salt Lake City",
+            "State": "Utah",
+            "Zip" : "84112",
+            "NOTES": "Outdoor",
+            "Capacity": "51500",
+            "Conference": "Pac 12",
+            "CurrentConference": "Big 12",
+            "Status": "Former",
+            "Surface": "FieldTurf",
+            "Opened": "1 Sep 1998",
+            "Cost": "50 Million",
+            "Description": "Home of the Utah Utes",
+            "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/05/riceeccles17950.jpg"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-111.8477, 40.7608]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "ID": 10,
+            "NAME": "Sun Devil Stadium",
+            "Tenant": "Arizona State Sun Devils",
+            "ADDRESS": "500 E Veterans Way",
+            "City": "Tempe",
+            "State": "Arizona",
+            "Zip" : "85281",
+            "NOTES": "Outdoor",
+            "Capacity": "53899",
+            "Conference": "Pac 12",
+            "CurrentConference": "Big 12",
+            "Status": "Former",
+            "Surface": "FieldTurf",
+            "Opened": "15 Oct 1958",
+            "Cost": "300 Million",
+            "Description": "Home of the Sun Devils",
+            "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/05/sundevil17950.jpg"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-111.9307, 33.4269]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "ID": 11,
+            "NAME": "Los Angeles Memorial Coliseum",
+            "Tenant": "USC Trojans",
+            "ADDRESS": "3911 S Figueroa St",
+            "City": "Los Angeles",
+            "State": "California",
+            "Zip" : "90037",
+            "NOTES": "Outdoor",
+            "Capacity": "77500",
+            "Conference": "Pac 12",
+            "CurrentConference": "Big Ten",
+            "Status": "Former",
+            "Surface": "Grass",
+            "Opened": "1 May 1923",
+            "Cost": "954 Million",
+            "Description": "Home of the USC Trojans",
+            "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/04/usc17950.jpg"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-118.2879, 34.0141]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "ID": 12,
+            "NAME": "Rose Bowl",
+            "Tenant": "UCLA Bruins",
+            "ADDRESS": "1001 Rose Bowl Dr",
+            "City": "Pasadena",
+            "State": "California",
+            "Zip" : "91103",
+            "NOTES": "Outdoor",
+            "Capacity": "88817",
+            "Conference": "Pac 12",
+            "CurrentConference": "Big Ten",
+            "Status": "Former",
+            "Surface": "Grass",
+            "Opened": "1 Jan 1922",
+            "Cost": "272 Million",
+            "Description": "Home of the UCLA Bruins",
+            "imgUrl": "https://www.collegegridirons.com/wp-content/uploads/2017/04/ucla17950.jpg"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-118.1679, 34.1614]
           }
         }
         
