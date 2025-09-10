@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import ReactMapGL, {FullscreenControl, Marker, Popup} from "react-map-gl";
-import { FaFootballBall, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import pac12Data from "../../data/pac12.json";
 
