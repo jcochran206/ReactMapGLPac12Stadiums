@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import ReactMapGL, {FullscreenControl, Marker, Popup} from "react-map-gl";
-import { FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFootballBall, FaMapMarkerAlt } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 import pac12Data from "../../data/pac12.json";
 
@@ -9,16 +9,12 @@ const [viewport, setViewport] = useState({
     latitude: 47.6062,
     longitude: -122.3321,
     zoom: 3,
+    style: 'mapbox://styles/mapbox/standard-satellite-v9',
 });
 
 const [showPopup, setShowPopup] = useState(null);
-const [mapError, setMapError] = useState(null);
 const location = useLocation();
 const isConferenceMapPage = location.pathname === '/conference-map';
-
-// Debug: Check if Mapbox token is available
-console.log('Mapbox token available:', !!process.env.REACT_APP_MAPBOX_ACCESS_TOKEN);
-console.log('Environment:', process.env.NODE_ENV);
 
 // Function to get marker color based on status
 const getMarkerColor = (status) => {
@@ -50,22 +46,6 @@ const getConferenceColor = (conference) => {
 
   return (
     <div className={isConferenceMapPage ? 'h-screen' : 'max-w-[1640px] mx-auto p-4'}>
-      {/* Error Display */}
-      {mapError && (
-        <div className="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-          <strong>Map Error:</strong> {mapError.message || 'Failed to load map'}
-          <br />
-          <small>Check console for more details</small>
-        </div>
-      )}
-      
-      {/* Missing Token Warning */}
-      {!process.env.REACT_APP_MAPBOX_ACCESS_TOKEN && (
-        <div className="mb-4 bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded">
-          <strong>Warning:</strong> Mapbox access token is missing. Please set REACT_APP_MAPBOX_ACCESS_TOKEN in your environment variables.
-        </div>
-      )}
-
       {/* Map Legend - only show on non-conference-map pages */}
       {!isConferenceMapPage && (
         <div className='mb-4 bg-white rounded-lg shadow-md p-4'>
@@ -115,10 +95,6 @@ const getConferenceColor = (conference) => {
         mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
         onMove={(viewport) => {
           setViewport(viewport);
-        }}
-        onError={(error) => {
-          console.error('Map error:', error);
-          setMapError(error);
         }}
         >
         {pac12Data.features.map((item) => (
