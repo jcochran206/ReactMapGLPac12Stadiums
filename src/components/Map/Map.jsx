@@ -9,7 +9,7 @@ const [viewport, setViewport] = useState({
     latitude: 47.6062,
     longitude: -122.3321,
     zoom: 3,
-    style: 'mapbox://styles/mapbox/standard-satellite',
+    style: 'mapbox://styles/mapbox/streets-v12',
 });
 
 const [showPopup, setShowPopup] = useState(null);
