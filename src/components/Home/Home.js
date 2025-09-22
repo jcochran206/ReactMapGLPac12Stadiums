@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaFootballBall, FaTrophy, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('current');
 
   const topTeams = [
@@ -18,7 +20,7 @@ const Home = () => {
       name: "Oregon State Beavers", 
       conference: "Pac-12",
       stadium: "Reser Stadium",
-      image: "https://www.collegegridirons.com/wp-content/uploads/2017/05/martin.jpeg",
+      image: "	https://www.collegegridirons.com/wp-content/uploads/2017/05/reser17950.jpg",
       status: "current"
     },
     {
@@ -131,11 +133,11 @@ const Home = () => {
           Discover the rich history and current status of all Pac-12 conference stadiums
         </p>
         <div className='flex justify-center space-x-4'>
-          <button className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center'>
+          <button onClick={() => navigate('/conference-map')} className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center'>
             <FaMapMarkerAlt className='mr-2' />
             View Stadium Map
           </button>
-          <button className='bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors flex items-center'>
+          <button onClick={() => navigate('/history')} className='bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors flex items-center'>
             <FaFootballBall className='mr-2' />
             Learn History
           </button>
