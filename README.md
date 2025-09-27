@@ -4,6 +4,8 @@ This application is simple map that depicts all PAC 12 conference stadiums.  A u
 
 As of 8/6/23, PAC12 is in its final season as a conference.  The remaining teams are known as the G4 that comprise of Standford, Cal, Washington State Univ, Oregon State Univ.
 
+Current 2025-2026 season the Pac-12 Conference will have Oregon State and Washington State as is temaing football members for 2025 season, the New Pac-12 froming in 2026-beyond will include the existing members plus new members Boise State, Colorado State, Fresno State, Gonzaga, San Diego State, Texas State, and Utah State.  
+
 ## User Stories
 [x] As a user, I want to see all the prior PAC12 universities on a map
 [x] As a user, I want to know what conference each team has joined
